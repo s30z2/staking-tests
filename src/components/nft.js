@@ -32,8 +32,6 @@ export default function NFT() {
     nftcontract = new web3.eth.Contract(ABI, NFTCONTRACT);
     vaultcontract = new web3.eth.Contract(VAULTABI, STAKINGCONTRACT);
 
-    
-
     const tokensOwned = await nftcontract.methods.walletOfOwner(account).call();
     const nfts = tokensOwned.map((id) => (
       {
@@ -137,7 +135,6 @@ export default function NFT() {
               }
               return (
                 <div>
-
                   <div className="card stakedcard mt-3 mb-3" key={i} >
                     <div className="image-over">
                       <img className="card-img-top" src={nftpng + nft.tokenId + '.png'} alt="" />

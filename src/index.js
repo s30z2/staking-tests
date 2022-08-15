@@ -16,7 +16,7 @@ root.render(
           <Route path="/" element={<App />} />
         </Routes>
       </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode> 
 );
 
 reportWebVitals();
